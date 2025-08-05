@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "SERA Innovation",
     description:
       "AI-first consulting, generative AI products, and corporate training for a smarter future.",
-    images: ["/og-default.jpg"],
+    images: ["/logo-serainnovation.png"],
   },
 };
 

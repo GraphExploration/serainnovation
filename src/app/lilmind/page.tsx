@@ -2,7 +2,7 @@ import React from 'react';
 import type { Metadata } from "next";
 
 
-export const metadata = {
+export const metadata:Metadata = {
   title: "LilMind – AI-Powered Parenting Assistant",
   description:
     "LilMind is your smart parenting companion: predictive baby care tracking, personalized advice, health insights, and unified childcare tools.",
@@ -13,7 +13,7 @@ export const metadata = {
     url: "https://www.serainnovation.com/lilmind",
     images: [
       {
-        url: "/og-lilmind.jpg",
+        url: "/logo-lilmind.png",
         width: 1200,
         height: 630,
         alt: "LilMind AI Parenting Assistant",

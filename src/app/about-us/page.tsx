@@ -1,6 +1,6 @@
+import type { Metadata } from "next";
 import AboutSection from "@/components/sections/AboutSection";
 
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Us | SERA Innovation",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     siteName: "SERA Innovation",
     images: [
       {
-        url: "/og-about.jpg",
+        url: "/logo-serainnovation.png",
         width: 1200,
         height: 630,
         alt: "About SERA Innovation",
@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
+
 
 
 export default function AboutPage() {

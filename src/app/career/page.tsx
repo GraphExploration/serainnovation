@@ -12,7 +12,7 @@ export const metadata = {
     url: "https://www.serainnovation.com/career",
     images: [
       {
-        url: "/og-career.jpg",
+        url: "/logo-serainnovation.png",
         width: 1200,
         height: 630,
         alt: "SERA Innovation Careers",

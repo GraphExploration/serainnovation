@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata:Metadata = {
   title: "AI Consulting, Generative AI, Graph Intelligence & More",
   description:
     "Explore our AI services: strategy, generative AI development, knowledge graphs, graph intelligence systems, and responsible AI tooling.",
@@ -12,7 +12,7 @@ export const metadata = {
     url: "https://www.serainnovation.com/services",
     images: [
       {
-        url: "/og-services.jpg",
+        url: "/logo-serainnovation.png",
         width: 1200,
         height: 630,
         alt: "AI Services Overview",

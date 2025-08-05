@@ -29,7 +29,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-gradient-to-r from-blue-50 to-indigo-100 py-24 px-6 relative">
+    <section id="contact" className="bg-gradient-to-r from-blue-50 to-indigo-100 py-12 px-6 relative">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         
         {/* LEFT: Text */}

@@ -11,7 +11,7 @@ export const metadata = {
     url: "https://www.serainnovation.com/contact",
     images: [
       {
-        url: "/og-contact.jpg",
+        url: "/logo-serainnovation.png",
         width: 1200,
         height: 630,
         alt: "Contact SERA Innovation",

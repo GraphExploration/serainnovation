@@ -13,7 +13,7 @@ export const metadata = {
     url: "https://www.serainnovation.com/training",
     images: [
       {
-        url: "/og-training.jpg",
+        url: "/logo-serainnovation.png",
         width: 1200,
         height: 630,
         alt: "Corporate AI Training",
