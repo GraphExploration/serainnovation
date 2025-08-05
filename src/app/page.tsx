@@ -1,103 +1,228 @@
-import Image from "next/image";
+'use client';
+import { motion } from "framer-motion";
+import { Linkedin } from "lucide-react"; // make sure lucide-react is installed
 
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
+import AboutSection from "@/components/sections/AboutSection";
+import ServiceSection from "@/components/sections/ServiceSection";
+import TrainingSection from "@/components/sections/TrainingSection";
+import CareerSection from "@/components/sections/CareerSection";
+import ContactSection from "@/components/sections/ContactSection";
+import LilMind from "@/components/sections/LilMind";
+
+export const metadata = {
+  title: "AI-First Consulting, Generative AI Products & Training",
+  description:
+    "SERA Innovation is your partner for AI strategy, generative AI development, and corporate upskilling. Harness the power of GenAI and Graph Intelligence.",
+  openGraph: {
+    title: "AI-First Consulting, Generative AI Products & Training",
+    description:
+      "SERA Innovation is your partner for AI strategy, generative AI development, and corporate upskilling.",
+    url: "https://www.serainnovation.in",
+    images: [
+      {
+        url: "/og-home.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AI Technology Visual",
+      },
+    ],
+  },
+};
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+   
+    <div className="min-h-screen bg-white text-gray-800 font-sans">
+      {/* Navbar */}
+      <nav className="bg-white shadow px-8 py-6 flex items-center justify-between fixed top-0 left-0 right-0 z-50">
+      <div className="flex items-center gap-4">
+          <Image src="/logo3.png" alt="SeraInnovation Logo" width={120} height={110} />
+          {/* <span className="text-2xl font-bold text-blue-700">SERA Innovation</span> */}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        {/* Right: Nav items */}
+  <ul className="hidden md:flex items-center gap-10 text-gray-800 font-semibold">
+    {[
+      { id: "hero", label: "Home" },
+      { id: "about", label: "About Us" },
+      { id: "services", label: "Services" },
+      { id: "lilMind", label: "LilMind" },
+      { id: "training", label: "Training" },
+      { id: "career", label: "Career" },
+      { id: "contact", label: "Contact" },
+    ].map((item) => (
+      <li key={item.id}>
+        <button
+          onClick={() =>
+            document.getElementById(item.id)?.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            })
+          }
+          className="text-lg lg:text-xl hover:text-blue-600 transition-colors"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          {item.label}
+        </button>
+      </li>
+    ))}
+
+    {/* LinkedIn icon bigger */}
+    <li>
+      <a
+        href="https://www.linkedin.com/in/anukriti-g-5a583921/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-blue-600"
+        aria-label="LinkedIn"
+      >
+        <Linkedin className="w-6 h-6 lg:w-7 lg:h-7" />
+      </a>
+    </li>
+  </ul>
+</nav>
+
+      {/* Hero Section */}
+      <section
+  id="hero"
+  className="bg-gradient-to-r from-blue-50 to-indigo-100 py-18 px-6 overflow-hidden"
+>
+  <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12">
+    {/* LEFT: Text Content */}
+    <div>
+      <motion.h1
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-5xl md:text-6xl font-extrabold mb-6 text-blue-900 leading-tight"
+      >
+        <br></br>
+        <span className="bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">
+  Strategic. Evolving. Responsible AI.
+</span>      </motion.h1>
+
+      <p className="text-lg text-gray-700 mb-6 max-w-lg">
+        Empowering the Future with GenAI & Graph Intelligence
+      </p>
+      <p className="text-base text-gray-600 mb-8 max-w-xl">
+        At SERA Innovation, we deliver AI-first consulting, build cutting-edge AI products, and upskill organizations through expert-led corporate training.
+      </p>
+
+      <Button className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-500 text-white rounded-lg hover:shadow-lg hover:scale-105 transition">
+        Get Started
+      </Button>
+    </div>
+
+    {/* RIGHT: Hero Image with Blending Box */}
+   
+    <motion.div
+  initial={{ opacity: 0, x: 50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  className="relative flex justify-center items-center w-full h-full mt-35"
+>   
+  <Image
+    src="/AI_Base1.png" // Or /graph.jpeg or your hero illustration
+    alt="AI Network Illustration"
+    width={1200}
+    height={900}
+    className="rounded-xl shadow-xl object-contain w-full h-auto"
+    priority
+  />
+  
+  {/* Optional background glow */}
+  <div className="absolute -top-12 -right-12 w-72 h-72 bg-indigo-200 rounded-full blur-3xl opacity-40 -z-10" />
+</motion.div>
+
+  </div>
+</section>
+
+      {/* Clients Section */}
+      <section className="py-20 px-25 bg-white text-center">
+  <h2 className="text-2xl font-bold text-gray-800 mb-12">Trusted by Innovators</h2>
+  <div className="overflow-hidden relative w-full">
+    <div className="animate-marquee flex space-x-24 w-max">
+      <Image src="/hul.png" alt="HUL" width={100} height={40} />
+      <Image src="/amlc.jpeg" alt="AMLC" width={100} height={40} />
+      <Image src="/jnj.jpeg" alt="Johnson & Johnson" width={100} height={40} />
+      <Image src="/bse.png" alt="BSE" width={100} height={40} />
+      <Image src="/phoenix.png" alt="Phoenix Technologies, LLC" width={100} height={40} />
+      <Image src="/logo-perkypet.png" alt="PerkyPet" width={100} height={40} />
+      <Image src="/logo-symbiosis.png" alt="Symbiosis" width={100} height={40} />
+
+      
+      {/* duplicate for seamless scroll */}
+      <Image src="/hul.png" alt="HUL" width={100} height={40} />
+      <Image src="/amlc.jpeg" alt="AMLC" width={100} height={40} />
+      <Image src="/jnj.jpeg" alt="Johnson & Johnson" width={100} height={40} />
+      <Image src="/bse.png" alt="BSE" width={100} height={40} />
+      <Image src="/phoenix.png" alt="Phoenix Technologies, LLC" width={100} height={40} />
+      <Image src="/logo-perkypet.png" alt="PerkyPet" width={100} height={40} />
+      <Image src="/logo-symbiosis.png" alt="Symbiosis" width={100} height={40} />
+
+      
+    </div>
+  </div>
+</section>
+
+    
+
+      {/* Scrollable Sections from Sub-Pages */}
+              <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <section id="about" className="scroll-mt-28">
+        <AboutSection />
+      </section>
+        </motion.div>
+      {/* <div id="about"><AboutSection /></div> */}
+
+      <section id="about" className="scroll-mt-28">
+        <ServiceSection />
+      </section>
+
+      <section id="about" className="scroll-mt-28">
+        <TrainingSection />
+      </section>
+      {/* <div id="services"><ServiceSection /></div> */}
+      {/* <div id="training"><TrainingSection /></div> */}
+      <section id="lilMind" className="scroll-mt-28">
+        <LilMind />
+      </section>
+      <div id="career"><CareerSection /></div>
+      <div id="contact"><ContactSection /></div>
+
+
+      {/* CTA */}
+      <section className="bg-indigo-50 py-20 text-center">
+        <h2 className="text-3xl font-bold text-blue-800 mb-4">Partner with SERA Innovation</h2>
+        <p className="text-gray-700 mb-6 max-w-xl mx-auto">
+          We help businesses and individuals unlock the power of AI through products and tailored consulting. Let’s co-create something impactful.
+        </p>
+        <Button className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-500 text-white rounded-lg shadow-lg hover:scale-105 transition">
+  Get Started
+</Button>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center text-sm text-gray-500 py-8 bg-gray-100 border-t">
+  <div className="flex justify-center space-x-4 mb-2">
+    <a
+      href="https://www.linkedin.com/in/anukriti-g-5a583921/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-blue-600"
+    >
+      <Linkedin className="w-5 h-5 inline" />
+    </a>
+  </div>
+  &copy; {new Date().getFullYear()} SeraInnovation. All rights reserved.
+</footer>
     </div>
   );
 }
