@@ -12,10 +12,14 @@ export default function AboutSection() {
             <strong>SERA Innovation</strong> was founded by <strong>Anukriti Gupta</strong>, an IIT Bombay alum with deep expertise in AI, Graph Intelligence, and Healthcare transformation.
           </p>
           <p className="text-lg text-gray-700 mb-4">
-            We build scalable, ethical AI systems for enterprise, driven by deep domain insight and cutting-edge technology.
+            {/* We build scalable, ethical AI systems for enterprise, driven by deep domain insight and cutting-edge technology. */}
+            Anukriti has build scalable, ethical AI systems for enterprise, driven by deep domain insight and cutting-edge technology.
+
           </p>
           <p className="text-lg text-gray-700 mb-6">
-            Our team has delivered impact for companies like Unilever, BSE, UnitedHealth, and more — combining strategic thinking with hands-on innovation.
+            {/* Our team has delivered impact for companies like Unilever, BSE, UnitedHealth, and more — combining strategic thinking with hands-on innovation. */}
+            Anukriti has delivered impact for companies like Unilever, BSE, UnitedHealth, and more — combining strategic thinking with hands-on innovation.
+
           </p>
         </div>
         <div className="flex justify-center">

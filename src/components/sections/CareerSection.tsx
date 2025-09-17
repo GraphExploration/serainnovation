@@ -9,7 +9,8 @@ export default function CareerSection() {
         <div>
           <h2 className="text-4xl font-bold mb-6 text-blue-700">Join Our Team</h2>
           <p className="text-lg text-gray-700 mb-4">
-            At SeraInnovation, you’ll work at the intersection of technology, design, and social impact — crafting responsible AI solutions that matter.
+            {/* At SeraInnovation, you’ll work at the intersection of technology, design, and social impact — crafting responsible AI solutions that matter. */}
+            At LilMind, you’ll work at the intersection of technology, empathy, and child development — crafting responsible AI solutions that support parents and families.
           </p>
           <ul className="list-disc pl-5 text-gray-700 space-y-2">
             <li>Innovate with GenAI, and Knowledge Graphs</li>

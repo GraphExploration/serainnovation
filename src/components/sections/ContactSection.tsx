@@ -41,12 +41,19 @@ export default function ContactSection() {
             Our team will get back to you within 24–48 hours.
           </p>
           <div className="mt-6 bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-lg font-semibold mb-4">Why Partner with Us?</h3>
+            {/* <h3 className="text-lg font-semibold mb-4">Why Partner with Us?</h3>
             <ul className="space-y-2 text-gray-700">
               <li>✅ AI-first consulting expertise</li>
               <li>✅ Proven track record with global clients</li>
-              <li>✅ Tailored solutions for your needs</li>
+              <li>✅ Tailored solutions for your needs</li> */}
+
+            <h3 className="text-lg font-semibold mb-4">Why Partner with LilMind?</h3>
+            <ul className="space-y-2 text-gray-700">
+              <li>✅ AI-powered companion designed specifically for parents</li>
+              <li>✅ Built on trusted health knowledge and child development insights</li>
+              <li>✅ Focused on creating safer, smarter, and more informed parenting experiences</li>
             </ul>
+            
           </div>
         </div>
 

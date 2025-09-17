@@ -21,10 +21,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     default: "SERA Innovation",
-    template: "%s | SERA Innovation", // Page titles will be inserted here
+    template: "%s | SERA Innovation", 
   },
   description:
     "SERA Innovation delivers AI-first consulting, generative AI products, and corporate training. Empower your business with GenAI and Graph Intelligence.",
+    icons: {
+      icon: "/favicon.ico", 
+    },
   openGraph: {
     title: "SERA Innovation",
     description:

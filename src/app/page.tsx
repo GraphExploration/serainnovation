@@ -1,14 +1,33 @@
 import type { Metadata } from "next";
 import HomeClient from "./HomeClient";
 
+// export const metadata: Metadata = {
+//   title: "AI-First Consulting, Generative AI Products & Training",
+//   description:
+//     "SERA Innovation is your partner for AI strategy, generative AI development, and corporate upskilling. Harness the power of GenAI and Graph Intelligence.",
+//   openGraph: {
+//     title: "AI-First Consulting, Generative AI Products & Training",
+//     description:
+//       "SERA Innovation is your partner for AI strategy, generative AI development, and corporate upskilling.",
+//     url: "https://www.serainnovation.in",
+//     images: [
+//       { url: "/logo-serainnovation.png", width: 1200, height: 630, alt: "AI Technology Visual" },
+//     ],
+//   },
+// };
+
+// export default function Page() {
+//   return <HomeClient />;
+// }
+
 export const metadata: Metadata = {
-  title: "AI-First Consulting, Generative AI Products & Training",
+  title: "AI-First, Generative AI Products",
   description:
-    "SERA Innovation is your partner for AI strategy, generative AI development, and corporate upskilling. Harness the power of GenAI and Graph Intelligence.",
+    "SERA Innovation is building AI Strategy Product, and generative AI development. Harness the power of GenAI and Graph Intelligence.",
   openGraph: {
-    title: "AI-First Consulting, Generative AI Products & Training",
+    title: "AI-First, Generative AI Products",
     description:
-      "SERA Innovation is your partner for AI strategy, generative AI development, and corporate upskilling.",
+      "SERA Innovation is AI strategy, and generative AI development",
     url: "https://www.serainnovation.in",
     images: [
       { url: "/logo-serainnovation.png", width: 1200, height: 630, alt: "AI Technology Visual" },

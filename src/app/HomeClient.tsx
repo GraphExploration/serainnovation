@@ -33,26 +33,18 @@ export default function HomeClient() {
 
   <ul className="hidden md:flex items-center gap-10 text-gray-800 font-semibold">
     {[
-      { id: "hero", label: "Home" },
+      { id: "home", label: "Home" },
       { id: "about", label: "About Us" },
-      { id: "service", label: "Service" },
+      // { id: "service", label: "Service" },
       { id: "lilmind", label: "LilMind" },
-      { id: "training", label: "Training" },
+      // { id: "training", label: "Training" },
       { id: "career", label: "Career" },
       { id: "contact", label: "Contact" },
     ].map((item) => (
       <li key={item.id}>
-        <button
-          onClick={() =>
-            document.getElementById(item.id)?.scrollIntoView({
-              behavior: "smooth",
-              block: "center",
-            })
-          }
-          className="text-lg lg:text-xl hover:text-blue-600 transition-colors"
-        >
-          {item.label}
-        </button>
+        <a href={`#${item.id}`} className="text-lg lg:text-xl hover:text-blue-600 transition-colors">
+  {item.label}
+</a>
       </li>
     ))}
     <li>
@@ -69,9 +61,9 @@ export default function HomeClient() {
   </ul>
 </nav>
 
-{/* Hero */}
+{/* Home */}
 <section
-  id="hero"
+  id="home"
   className="bg-gradient-to-r from-blue-50 to-indigo-100 pt-43 pb-12 px-6 py-25 overflow-hidden"
 >
   {/* pt-32 ensures space from navbar */}
@@ -93,7 +85,9 @@ export default function HomeClient() {
         Empowering the Future with GenAI & Graph Intelligence
       </p>
       <p className="text-base text-gray-600 mb-8 max-w-xl">
-        At SERA Innovation, we deliver AI-first consulting, build cutting-edge AI products, and upskill organizations through expert-led corporate training.
+        {/* At SERA Innovation, we deliver AI-first consulting, build cutting-edge AI products, and upskill organizations through expert-led corporate training. */}
+        At LilMind, we’re creating an AI-powered companion app for parents — blending trusted health insights, child development guidance, and smart tools to make parenting simpler, safer, and more informed.
+
       </p>
 
       
@@ -152,9 +146,9 @@ export default function HomeClient() {
       </section>
 
       {/* Services */}
-      <section id="service" className="scroll-mt-32">
+      {/* <section id="service" className="scroll-mt-32">
         <ServiceSection />
-      </section>
+      </section> */}
 
       {/* LilMind */}
       <section id="lilmind" className="scroll-mt-32">
@@ -162,9 +156,9 @@ export default function HomeClient() {
       </section>
 
       {/* Training */}
-      <section id="training" className="scroll-mt-32">
+      {/* <section id="training" className="scroll-mt-32">
         <TrainingSection />
-      </section>
+      </section> */}
 
       {/* Career */}
       <section id="career" className="scroll-mt-32">
@@ -178,9 +172,13 @@ export default function HomeClient() {
 
       {/* CTA */}
       <section className="bg-indigo-50 py-20 text-center">
-        <h2 className="text-3xl font-bold text-blue-800 mb-4">Partner with SERA Innovation</h2>
+        {/* <h2 className="text-3xl font-bold text-blue-800 mb-4">Partner with SERA Innovation</h2> */}
+        <h2 className="text-3xl font-bold text-blue-800 mb-4">Partner with LilMind</h2>
+
         <p className="text-gray-700 mb-6 max-w-xl mx-auto">
-          We help businesses and individuals unlock the power of AI through products and tailored consulting. Let’s co-create something impactful.
+          {/* We help businesses and individuals unlock the power of AI through products and tailored consulting. Let’s co-create something impactful. */}
+          Through <strong>LilMind</strong>, we’re building an AI-powered companion for parents — a trusted “medical friend” that supports them in understanding and caring for their children. Join us to help shape this vision and make parenting smarter, safer, and easier.
+
         </p>
         <Button className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-500 text-white rounded-lg shadow-lg hover:scale-105 transition">
           Get Started
