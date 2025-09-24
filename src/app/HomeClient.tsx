@@ -129,7 +129,7 @@ export default function HomeClient() {
 </section>
 
       {/* Clients */}
-      <section className="py-8 px-6 bg-white text-center">
+      {/* <section className="py-8 px-6 bg-white text-center">
         <h2 className="text-2xl font-bold text-gray-800 mb-12">Trusted by Innovators</h2>
         <div className="overflow-hidden relative w-full">
           <div className="animate-marquee flex space-x-24 w-max">
@@ -138,7 +138,7 @@ export default function HomeClient() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About */}
       <section id="about" className="scroll-mt-32">
