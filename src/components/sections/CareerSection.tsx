@@ -1,39 +1,60 @@
-// components/sections/CareerSection.tsx
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import React from 'react';
+import { Button } from '@/components/ui/button';
 
-export default function CareerSection() {
+export default function ContactSection() {
   return (
-    <section id="career" className="py-24 px-6 bg-gray-50 text-gray-800">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 className="text-4xl font-bold mb-6 text-blue-700">Join Our Team</h2>
-          <p className="text-lg text-gray-700 mb-4">
-            {/* At SeraInnovation, you’ll work at the intersection of technology, design, and social impact — crafting responsible AI solutions that matter. */}
-            At LilMind, you’ll work at the intersection of technology, empathy, and child development — crafting responsible AI solutions that support parents and families.
-          </p>
-          <ul className="list-disc pl-5 text-gray-700 space-y-2">
-            <li>Innovate with GenAI, and Knowledge Graphs</li>
-            <li>Work with mission-driven organizations</li>
-            <li>Remote-friendly with flexible culture</li>
-          </ul>
-          <div className="mt-6">
-            <a href="mailto:contact@serainnovation.in" className="text-indigo-600 underline text-base font-medium">
-            <br></br>
-          <Button className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-500 text-white rounded-lg hover:shadow-lg hover:scale-105 transition">
-        Apply
-      </Button>
-            </a>
+    <section id="contact" className="py-24 bg-slate-50">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+          
+          {/* Left Side: Info */}
+          <div className="bg-slate-900 p-12 text-white md:w-1/3">
+            <h2 className="text-3xl font-bold mb-6">Let's talk Intelligence.</h2>
+            <p className="text-slate-400 mb-8">
+              See how DealSense can transform your fund's due diligence workflow.
+            </p>
+            <div className="space-y-4 text-sm text-slate-300">
+              <p>✓ Personalized Demo</p>
+              <p>✓ Sample Health Report</p>
+              <p>✓ Pricing for your Fund Size</p>
+            </div>
           </div>
-        </div>
-        <div className="flex justify-center">
-          <Image
-            src="/hiring.png"
-            alt="Team hiring illustration"
-            width={500}
-            height={400}
-            className="rounded-lg shadow-lg"
-          />
+
+          {/* Right Side: Form */}
+          <div className="p-12 md:w-2/3">
+            <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <label className="text-sm font-semibold text-slate-700">Full Name</label>
+                <input type="text" className="w-full p-3 rounded-lg border border-slate-200 focus:border-emerald-500 outline-none transition-all" placeholder="John Doe" />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-semibold text-slate-700">Work Email</label>
+                <input type="email" className="w-full p-3 rounded-lg border border-slate-200 focus:border-emerald-500 outline-none transition-all" placeholder="john@vc-firm.com" />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-semibold text-slate-700">Fund/Company Name</label>
+                <input type="text" className="w-full p-3 rounded-lg border border-slate-200 focus:border-emerald-500 outline-none transition-all" placeholder="Sequoia Capital" />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-semibold text-slate-700">Investment Stage</label>
+                <select className="w-full p-3 rounded-lg border border-slate-200 focus:border-emerald-500 outline-none transition-all bg-white">
+                  <option>Seed / Pre-Seed</option>
+                  <option>Series A/B</option>
+                  <option>Growth / PE</option>
+                  <option>Angel Investor</option>
+                </select>
+              </div>
+              <div className="md:col-span-2 space-y-2">
+                <label className="text-sm font-semibold text-slate-700">How can we help?</label>
+                <textarea className="w-full p-3 rounded-lg border border-slate-200 focus:border-emerald-500 outline-none transition-all h-32" placeholder="Tell us about your current diligence process..."></textarea>
+              </div>
+              <div className="md:col-span-2">
+                <Button className="w-full py-6 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-lg text-lg transition-transform active:scale-95">
+                  Request Demo
+                </Button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>

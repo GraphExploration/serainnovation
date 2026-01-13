@@ -7,10 +7,10 @@ import { Button } from "@/components/ui/button";
 
 import AboutSection from "@/components/sections/AboutSection";
 import ServiceSection from "@/components/sections/ServiceSection"; // <-- plural
-import TrainingSection from "@/components/sections/TrainingSection";
+// import TrainingSection from "@/components/sections/TrainingSection";
 import CareerSection from "@/components/sections/CareerSection";
 import ContactSection from "@/components/sections/ContactSection";
-import LilMind from "@/components/sections/LilMind";
+// import LilMind from "@/components/sections/Product";
 
 const CLIENT_LOGOS = [
   { src: "/hul.png", alt: "HUL" },
@@ -82,7 +82,7 @@ export default function HomeClient() {
       </motion.h1>
 
       <p className="text-lg text-gray-700 mb-6 max-w-lg">
-        Empowering the Future with GenAI & Graph Intelligence
+        Empowering the Future with GenAI Intelligence
       </p>
       <p className="text-base text-gray-600 mb-8 max-w-xl">
         {/* At SERA Innovation, we deliver AI-first consulting, build cutting-edge AI products, and upskill organizations through expert-led corporate training. */}
