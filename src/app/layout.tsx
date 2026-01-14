@@ -1,60 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-// export const metadata: Metadata = {
-//   title: "Serainnovation",
-//   description: "AI-first products to simplify life",
-// };
-
-
+// This is the metadata we updated for DealSense
 export const metadata: Metadata = {
-  title: {
-    default: "SERA Innovation",
-    template: "%s | SERA Innovation", 
-  },
-  description:
-    "SERA Innovation delivers AI-first consulting, generative AI products, and corporate training. Empower your business with GenAI and Graph Intelligence.",
-    icons: {
-      icon: "/favicon.ico", 
-    },
-  openGraph: {
-    title: "SERA Innovation",
-    description:
-      "SERA Innovation delivers AI-first consulting, generative AI products, and corporate training. Empower your business with GenAI and Graph Intelligence.",
-    url: "https://www.serainnovation.in",
-    siteName: "SERA Innovation",
-    images: [
-      {
-        url: "/og-default.jpg",
-        width: 1200,
-        height: 630,
-        alt: "SERA Innovation Logo and AI Concept",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "SERA Innovation",
-    description:
-      "AI-first consulting, generative AI products, and corporate training for a smarter future.",
-    images: ["/logo-serainnovation.png"],
-  },
+  title: "DealSense | AI-Driven Investment Due Diligence",
+  description: "Advanced startup health assessment for VCs and Fund Managers using Graph Intelligence.",
 };
 
-
+// This is the "Default Export" the error is looking for
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -62,9 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased">
         {children}
       </body>
     </html>

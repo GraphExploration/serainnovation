@@ -6,102 +6,72 @@ export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    fundName: "",
+    stage: "Seed/Series A",
     message: "",
   });
   const [showPopup, setShowPopup] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
-
-    // TODO: Send data to backend/email API
     setShowPopup(true);
-
-    // Hide popup after 3s
-    setTimeout(() => setShowPopup(false), 3000);
-
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
+    setTimeout(() => setShowPopup(false), 4000);
+    setFormData({ name: "", email: "", fundName: "", stage: "Seed/Series A", message: "" });
   };
 
   return (
-    <section id="contact" className="bg-gradient-to-r from-blue-50 to-indigo-100 py-12 px-6 relative">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        
-        {/* LEFT: Text */}
+    <section id="contact" className="bg-slate-900 py-20 px-6 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl -z-0"></div>
+      
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
         <div>
-          <h2 className="text-4xl font-bold text-blue-900 mb-4">Let’s Build Together</h2>
-          <p className="text-gray-700 mb-6">
-            Have a project in mind or just curious about what we do? 
-            
-            Our team will get back to you within 24–48 hours.
+          <h2 className="text-4xl font-bold text-white mb-6">Request a Strategic Demo</h2>
+          <p className="text-slate-400 text-lg mb-8">
+            Discover how DealSense can institutionalize your due diligence workflow.
           </p>
-          <div className="mt-6 bg-white p-6 rounded-lg shadow-lg">
-            {/* <h3 className="text-lg font-semibold mb-4">Why Partner with Us?</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>✅ AI-first consulting expertise</li>
-              <li>✅ Proven track record with global clients</li>
-              <li>✅ Tailored solutions for your needs</li> */}
-
-            <h3 className="text-lg font-semibold mb-4">Why Partner with LilMind?</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>✅ AI-powered companion designed specifically for parents</li>
-              <li>✅ Built on trusted health knowledge and child development insights</li>
-              <li>✅ Focused on creating safer, smarter, and more informed parenting experiences</li>
+          <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 shadow-xl">
+            <ul className="space-y-4 text-slate-300">
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-500 font-bold">✓</span>
+                <span>Institutional-grade data security</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-emerald-500 font-bold">✓</span>
+                <span>Proprietary Graph Intelligence analysis</span>
+              </li>
             </ul>
-            
           </div>
         </div>
 
-        {/* RIGHT: Form */}
-        <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg space-y-6">
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-            <input
-              type="text" id="name" name="name"
-              value={formData.name} onChange={handleChange}
-              required
-              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
-            />
+        <form onSubmit={handleSubmit} className="bg-white p-8 md:p-10 rounded-2xl shadow-2xl space-y-5">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="col-span-2 md:col-span-1">
+              <label className="block text-xs font-bold uppercase text-slate-500 mb-2">Name</label>
+              <input type="text" name="name" value={formData.name} onChange={handleChange} required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg outline-none" placeholder="John Doe" />
+            </div>
+            <div className="col-span-2 md:col-span-1">
+              <label className="block text-xs font-bold uppercase text-slate-500 mb-2">Work Email</label>
+              <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg outline-none" placeholder="john@vc-firm.com" />
+            </div>
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-            <input
-              type="email" id="email" name="email"
-              value={formData.email} onChange={handleChange}
-              required
-              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
-            />
+            <label className="block text-xs font-bold uppercase text-slate-500 mb-2">Fund/Company</label>
+            <input type="text" name="fundName" value={formData.fundName} onChange={handleChange} required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg outline-none" placeholder="DealSense Capital" />
           </div>
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-            <textarea
-              id="message" name="message"
-              value={formData.message} onChange={handleChange}
-              required rows={4}
-              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white py-3 rounded-lg font-medium hover:shadow-lg hover:scale-[1.02] transition"
-          >
-            Send Message
+          <button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-4 rounded-xl font-bold text-lg transition-all">
+            Schedule Briefing
           </button>
         </form>
       </div>
 
-      {/* Small Popup Dialog */}
       {showPopup && (
-        <div className="absolute top-10 right-10 bg-white border border-gray-200 rounded-lg shadow-xl p-4 max-w-xs w-full z-50">
-          <h3 className="text-lg font-semibold text-green-600 mb-1">✅ Message Sent!</h3>
-          <p className="text-gray-700 text-sm">
-            Thank you for reaching out. We'll get back to you soon.
-          </p>
+        <div className="fixed bottom-10 right-10 bg-white border-l-4 border-emerald-500 rounded-lg shadow-2xl p-6 max-w-sm w-full z-[100]">
+          <h3 className="text-lg font-bold text-slate-900">Inquiry Received</h3>
+          <p className="text-slate-600 text-sm">Our team will reach out shortly.</p>
         </div>
       )}
     </section>

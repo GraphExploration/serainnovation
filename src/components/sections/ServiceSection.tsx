@@ -1,57 +1,62 @@
-import { Briefcase, Code2, Network, ShieldCheck, GitBranch, BarChart3 } from "lucide-react";
+import React from 'react';
+import { Card } from '@/components/ui/card';
+// ADD THIS LINE BELOW:
+import { Activity, ShieldCheck, GitGraph, FileText } from 'lucide-react';
 
-export default function ServicesSection() {
-  const services = [
-    {
-      icon: <Briefcase className="w-10 h-10 text-indigo-600" />,
-      title: "AI Strategy & Consulting",
-      desc: "Roadmapping your AI journey, aligning tech with business goals, and defining measurable outcomes.",
-    },
-    {
-      icon: <Code2 className="w-10 h-10 text-indigo-600" />,
-      title: "Generative AI Products",
-      desc: "Building real-world LLM apps, fine-tuning pipelines, and safe prompt engineering.",
-    },
-    {
-      icon: <GitBranch className="w-10 h-10 text-indigo-600" />,
-      title: "Knowledge Graph Engineering",
-      desc: "Designing ontologies, entity linking, and graph ETL to unify data into a connected, queryable source of truth.",
-    },
-    {
-      icon: <Network className="w-10 h-10 text-indigo-600" />,
-      title: "Graph Intelligence Systems",
-      desc: "Graph-based platforms for fraud detection, recommendations, and decision-making.",
-    },
-    {
-      icon: <ShieldCheck className="w-10 h-10 text-indigo-600" />,
-      title: "Responsible AI Tooling",
-      desc: "Auditing and improving fairness, explainability, and risk in deployed models.",
-    },
-    {
-      icon: <BarChart3 className="w-10 h-10 text-indigo-600" />,
-      title: "AI & Data Science",
-      desc: "End-to-end data solutions from preprocessing and modeling to deployment, delivering actionable insights.",
-    },
-  ];
+const features = [
+  {
+    title: "Venture Health Scoring",
+    description: "Proprietary algorithms that analyze financial health, cap tables, and hiring trends to output a single 'Investability' score.",
+    icon: <Activity className="text-emerald-500" />,
+    color: "bg-emerald-500/10"
+  },
+  {
+    title: "Automated Due Diligence",
+    description: "Scan data rooms in minutes. Our AI extracts key terms, flags legal anomalies, and identifies potential red flags.",
+    icon: <ShieldCheck className="text-blue-500" />,
+    color: "bg-blue-500/10"
+  },
+  {
+    title: "Market Analysis",
+    description: "Visualize the competitive landscape. See how a startup's tech stack and team DNA stack up against market leaders.",
+    icon: <GitGraph className="text-purple-500" />,
+    color: "bg-purple-500/10"
+  },
+  {
+    title: "LP Reporting",
+    description: "Instantly generate high-fidelity investment memos and quarterly reports for your Limited Partners.",
+    icon: <FileText className="text-amber-500" />,
+    color: "bg-amber-500/10"
+  }
+];
 
+export default function FeatureSection() {
   return (
-    <section id="services" className="py-24 px-6 bg-white text-gray-800">
-      <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-blue-800 mb-4">Our Services</h2>
-        <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
-          We offer a full spectrum of AI services — from strategic consulting to advanced product development — tailored for measurable impact.
-        </p>
+    <section id="features" className="py-24 bg-slate-50">
+      <div className="container mx-auto px-4">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            Institutional Grade Deal Intelligence
+          </h2>
+          <p className="text-lg text-slate-600">
+            DealSense leverages AI Intelligence to provide investors with 
+            unparalleled clarity on startup health and market risks.
+          </p>
+        </div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, idx) => (
-            <div
-              key={idx}
-              className="bg-gray-50 rounded-xl p-8 text-left shadow-sm hover:shadow-lg transition hover:-translate-y-1"
-            >
-              <div className="mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-gray-600 text-sm">{service.desc}</p>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => (
+            <Card key={index} className="p-8 border-none shadow-sm hover:shadow-md transition-shadow bg-white">
+              <div className={`w-14 h-14 ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
+                {feature.icon}
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                {feature.title}
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                {feature.description}
+              </p>
+            </Card>
           ))}
         </div>
       </div>

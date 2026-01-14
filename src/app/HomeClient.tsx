@@ -7,10 +7,10 @@ import { Button } from "@/components/ui/button";
 
 import AboutSection from "@/components/sections/AboutSection";
 import ServiceSection from "@/components/sections/ServiceSection"; // <-- plural
-import TrainingSection from "@/components/sections/TrainingSection";
+// import TrainingSection from "@/components/sections/TrainingSection";
 import CareerSection from "@/components/sections/CareerSection";
 import ContactSection from "@/components/sections/ContactSection";
-import LilMind from "@/components/sections/LilMind";
+// import LilMind from "@/components/sections/Product";
 
 const CLIENT_LOGOS = [
   { src: "/hul.png", alt: "HUL" },
@@ -36,7 +36,7 @@ export default function HomeClient() {
       { id: "home", label: "Home" },
       { id: "about", label: "About Us" },
       // { id: "service", label: "Service" },
-      { id: "lilmind", label: "LilMind" },
+      // { id: "lilmind", label: "LilMind" },
       // { id: "training", label: "Training" },
       { id: "career", label: "Career" },
       { id: "contact", label: "Contact" },
@@ -82,7 +82,7 @@ export default function HomeClient() {
       </motion.h1>
 
       <p className="text-lg text-gray-700 mb-6 max-w-lg">
-        Empowering the Future with GenAI & Graph Intelligence
+        Empowering the Future with GenAI Intelligence
       </p>
       <p className="text-base text-gray-600 mb-8 max-w-xl">
         {/* At SERA Innovation, we deliver AI-first consulting, build cutting-edge AI products, and upskill organizations through expert-led corporate training. */}
@@ -150,10 +150,6 @@ export default function HomeClient() {
         <ServiceSection />
       </section> */}
 
-      {/* LilMind */}
-      <section id="lilmind" className="scroll-mt-32">
-        <LilMind />
-      </section>
 
       {/* Training */}
       {/* <section id="training" className="scroll-mt-32">
@@ -177,7 +173,7 @@ export default function HomeClient() {
 
         <p className="text-gray-700 mb-6 max-w-xl mx-auto">
           {/* We help businesses and individuals unlock the power of AI through products and tailored consulting. Let’s co-create something impactful. */}
-          Through <strong>LilMind</strong>, we’re building an AI-powered companion for parents — a trusted “medical friend” that supports them in understanding and caring for their children. Join us to help shape this vision and make parenting smarter, safer, and easier.
+          {/* Through <strong>LilMind</strong>, we’re building an AI-powered companion for parents — a trusted “medical friend” that supports them in understanding and caring for their children. Join us to help shape this vision and make parenting smarter, safer, and easier. */}
 
         </p>
         <Button className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-500 text-white rounded-lg shadow-lg hover:scale-105 transition">
