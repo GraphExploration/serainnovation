@@ -150,10 +150,6 @@ export default function HomeClient() {
         <ServiceSection />
       </section> */}
 
-      {/* LilMind */}
-      {/* <section id="lilmind" className="scroll-mt-32">
-        // <LilMind />
-      </section> */}
 
       {/* Training */}
       {/* <section id="training" className="scroll-mt-32">
