@@ -44,9 +44,12 @@ export default function Nav() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
-            <Button variant="ghost" className="text-slate-600">Menu</Button>
-          </div>
+{/* Mobile Menu Button - Manual Ghost Style */}
+<div className="md:hidden flex items-center">
+  <Button className="bg-transparent hover:bg-slate-100 text-slate-600 border-none shadow-none px-4 py-2 rounded-md transition-colors">
+    Menu
+  </Button>
+</div>
         </div>
       </div>
     </nav>

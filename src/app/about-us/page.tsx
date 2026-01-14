@@ -96,14 +96,14 @@ export default function AboutUs() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 text-center bg-slate-50">
-        <h2 className="text-3xl font-bold mb-8 text-slate-900">Join the elite funds using DealSense</h2>
-        <a href="mailto:gupta.anukriti@serainnovation.in?subject=Meeting Request: DealSense Inquiry">
-          <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 px-12 h-14 rounded-full text-lg shadow-xl shadow-emerald-500/20 transition-all hover:scale-105">
-            Meet the Founders
-          </Button>
-        </a>
-      </section>
+<section className="py-24 text-center bg-slate-50">
+  <h2 className="text-3xl font-bold mb-8 text-slate-900">Join the elite funds using DealSense</h2>
+  <a href="mailto:gupta.anukriti@serainnovation.in?subject=Meeting Request: DealSense Inquiry">
+    <Button className="bg-emerald-600 hover:bg-emerald-700 px-12 h-14 w-auto rounded-full text-lg shadow-xl shadow-emerald-500/20 transition-all hover:scale-105 inline-flex items-center justify-center">
+      Meet the Founders
+    </Button>
+  </a>
+</section>
     </main>
   );
 }

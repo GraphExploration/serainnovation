@@ -36,7 +36,7 @@ export default function HomeClient() {
       { id: "home", label: "Home" },
       { id: "about", label: "About Us" },
       // { id: "service", label: "Service" },
-      { id: "lilmind", label: "LilMind" },
+      // { id: "lilmind", label: "LilMind" },
       // { id: "training", label: "Training" },
       { id: "career", label: "Career" },
       { id: "contact", label: "Contact" },
@@ -151,9 +151,9 @@ export default function HomeClient() {
       </section> */}
 
       {/* LilMind */}
-      <section id="lilmind" className="scroll-mt-32">
+      {/* <section id="lilmind" className="scroll-mt-32">
         <LilMind />
-      </section>
+      </section> */}
 
       {/* Training */}
       {/* <section id="training" className="scroll-mt-32">
