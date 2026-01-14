@@ -152,7 +152,7 @@ export default function HomeClient() {
 
       {/* LilMind */}
       {/* <section id="lilmind" className="scroll-mt-32">
-        <LilMind />
+        // <LilMind />
       </section> */}
 
       {/* Training */}
@@ -177,7 +177,7 @@ export default function HomeClient() {
 
         <p className="text-gray-700 mb-6 max-w-xl mx-auto">
           {/* We help businesses and individuals unlock the power of AI through products and tailored consulting. Let’s co-create something impactful. */}
-          Through <strong>LilMind</strong>, we’re building an AI-powered companion for parents — a trusted “medical friend” that supports them in understanding and caring for their children. Join us to help shape this vision and make parenting smarter, safer, and easier.
+          {/* Through <strong>LilMind</strong>, we’re building an AI-powered companion for parents — a trusted “medical friend” that supports them in understanding and caring for their children. Join us to help shape this vision and make parenting smarter, safer, and easier. */}
 
         </p>
         <Button className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-500 text-white rounded-lg shadow-lg hover:scale-105 transition">

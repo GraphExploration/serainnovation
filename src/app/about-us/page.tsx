@@ -34,12 +34,12 @@ export default function AboutUs() {
             </p>
             <div className="grid grid-cols-2 gap-6 pt-4">
               <div className="p-4 border-l-4 border-emerald-500 bg-emerald-50">
-                <div className="font-bold text-2xl text-slate-900">IIT Bombay</div>
+                <div className="font-bold text-2xl text-slate-900">AI & Financial Experience</div>
                 <div className="text-sm text-slate-500 uppercase tracking-widest font-bold">Foundation</div>
               </div>
               <div className="p-4 border-l-4 border-blue-500 bg-blue-50">
-                <div className="font-bold text-2xl text-slate-900">10+</div>
-                <div className="text-sm text-slate-500 uppercase tracking-widest font-bold">AI Patents</div>
+                <div className="font-bold text-2xl text-slate-900">10+ years </div>
+                <div className="text-sm text-slate-500 uppercase tracking-widest font-bold">Industrial Experience</div>
               </div>
             </div>
           </div>
