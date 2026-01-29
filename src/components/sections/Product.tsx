@@ -33,14 +33,15 @@ export default function DealSenseHero() {
                    <div className="w-3 h-3 rounded-full bg-amber-500/80"></div>
                    <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
                 </div>
-                <div className="bg-slate-1050/50 px-3 py-1 rounded text-[10px] text-slate-500 font-mono">
+                <div className="bg-slate-950/50 px-3 py-1 rounded text-[10px] text-slate-500 font-mono">
                    dealsenseai/home
                 </div>
              </div>
 
              {/* The Screenshot Container */}
              {/* <div className="relative aspect-video bg-slate-900"> */}
-             <div className="relative aspect-[16/10] bg-slate-900 min-h-[400px]">
+             {/* <div className="relative aspect-[16/10] bg-slate-900 min-h-[400px] min-w-[500px]"> */}
+             <div className="relative aspect-[16/9] bg-slate-900 min-h-[400px] w-full">
                 <img 
                   src="/dealsense_demo.png" 
                   alt="DealSense AI Analysis Dashboard" 
