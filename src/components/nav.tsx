@@ -4,9 +4,9 @@ import { Button } from '@/components/ui/button';
 
 export default function Nav() {
   const navLinks = [
-    { name: "Features", href: "/features" },
-    { name: "How it Works", href: "/how-it-works" },
-    { name: "Pricing", href: "/pricing" },
+    { name: "Features", href: "/#features" },
+    { name: "How it Works", href: "/#how-it-works" },
+    { name: "Pricing", href: "/#pricing" },
     { name: "About", href: "/about-us" },
   ];
 
